@@ -12,7 +12,7 @@ class Account extends Component{
             <select name="Opperetor" id="sel">
                 <option value="Admin">Admin</option>
                 <option>Police</option>
-                <option value="Complainer"></option>
+                <option value="Complainer">Complainer</option>
             </select>
 
             <p>
