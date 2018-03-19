@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo.svg';
 import './App.css';
+import Account from "./Accounts/accounts.js"
 //<img src={logo} className="App-logo" alt="logo" />
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
           <h1 className="navbar-brand header-nav">Welcome Rajasthan Complain Network</h1>
         </header>
         <p className="App-intro">
-          This is a site where you
+          <Account />
         </p>
       </div>
     );
