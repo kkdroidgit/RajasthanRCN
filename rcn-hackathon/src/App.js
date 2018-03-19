@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App jumbotron">
         <header className="App-header ">
-          <h1 className="navbar-brand header-nav">Welcome Rajasthan Complain Network</h1>
+          <h1 className="navbar-brand header-nav">Rajasthan Complain Network(RCN)</h1>
         </header>
         <p className="App-intro">
           <Account />

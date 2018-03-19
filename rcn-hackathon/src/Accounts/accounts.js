@@ -7,8 +7,8 @@ class Account extends Component{
   render(){
     return(
       <div class="jumbotron">
-        <div>
-            <label for="sel">Opperetor:</label>
+        <div class>
+            <label for="sel">OPERATOR:</label>
             <select name="Opperetor" id="sel">
                 <option value="Admin">Admin</option>
                 <option>Police</option>
@@ -16,7 +16,7 @@ class Account extends Component{
             </select>
 
             <p>
-                Opperetor id:
+                Opertor id:
             </p>
             <br/>
             <hr/>
