@@ -45,10 +45,15 @@ class App extends Component {
 			<Router>
 				<div className="App">
 					<Header />
-
 					<Route exact path='/Register' render={(props) => ( <Register contractObject={this.complainContract} web3Obj={this.web3}/> )} />
 					<Route exact path='/View' render={(props) => ( <View contractObject={this.complainContract} web3Obj={this.web3} /> )} />
-
+	Object.size = function(context) {
+    var size = 0, key;
+    for (key in context) {
+        if (context.hasOwnProperty(key)) size++;
+    }
+    return size;
+	};
 					<Route exact path='/Accounts' render={(props) => ( <Accounts contractObject={this.complainContract} web3Obj={this.web3} /> )} />
 
 				</div>
