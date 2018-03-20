@@ -8,8 +8,9 @@
 }
 
 .App-header {
+  margin: 0px 0px 28px;
   background-color: #222;
-  height: 150px;
+  height: 120px;
   padding: 20px;
   color: white;
 }
@@ -28,8 +29,14 @@
 }
 
 .header-nav{
+  padding: 25px;
   text-align: center;
   font-size: 2em;
   width: 100%;
   height: 50px;
+}
+
+.jumbotron{
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 30px 0px;
 }
