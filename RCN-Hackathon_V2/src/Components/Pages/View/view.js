@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './view.css'
+import './view.css';
+//import dataObjProps from '../Register/register.js';
 
-
-import $ from 'jquery'
+import $ from 'jquery';
 
 class View extends Component {
 
@@ -51,7 +51,7 @@ class View extends Component {
 	}
 
 	catType(a) {
-        console.log('dfdsfsdf'+ a)
+        //console.log('dfdsfsdf'+ a)
         if(a===0)
             return 'Lost'
         else if(a===1)
@@ -63,15 +63,20 @@ class View extends Component {
     }
 
     statusType(a) {
-        if(a == 0)
-            return 'Pending'
+        if(a === 0)
+            return 'Pending';
         else if(a === 1)
-            return 'Accepted'
+            return 'Accepted';
         else if(a === 2)
-            return 'Resolved'
+            return 'Resolved';
         else if(a === 3)
-        	return 'Proposed'
+        	return 'Proposed';
     }
+
+		//calling data from register.js
+
+
+
 
     actionFirstButton(e) {
     	var complain = this.fetchedComplains[e.target.getAttribute('data-index')]
@@ -258,7 +263,8 @@ class View extends Component {
 
 
 	renderTable() {
-		var context = this
+		var context = this;
+		//console.log(dataObjProps)
 		console.log('jhgjhg')
 		/*var pp  = React.createElement('tbody', {'id': 'table-body'}, p)
 
@@ -266,20 +272,24 @@ class View extends Component {
 		context.setState({table: pp})*/
 		//context.iconNode.props.className = 'glyphicon glyphicon-arrow-up'
 
-		console.log(context.fetchedComplains)
+//		console.log(context.fetchedComplains + 'hjwxjhxdwqhx')
 		var reactTableRows = []
-		for(var i = 0; i<context.fetchedComplains.length; i++) {
+//size of object
 
-			var fetchData = context.fetchedComplains[i]
+		for(var i = 0; i<context.length; i++) {
+			var fetchData = context[i]
 			var details = fetchData.data.split('?')
 	        //console.log(details)
-
+console.log(fetchData.cid);
 	        var _th  = <th scope="row">{fetchData.cid}</th>
+					console.log(fetchData.cid);
 	        var _td1 = <td>{details[0]}</td>
 	        var _td2 = <td>{details[1]}</td>
 	        var _td3 = <td>{details[2]}</td>
 	        var _td4 = <td>{context.catType(fetchData.cat)}</td>
+					//console.log(context.catType(fetchData.cat))
 	        var _td5 = <td>&#8377; {(fetchData.reward/1e9).toFixed(2)}</td>
+					//console.log((fetchData.reward/1e9).toFixed(2));
 	        var _td6 = <td><p className={context.statusType(fetchData.status)}>{context.statusType(fetchData.status)}</p></td>
 	        var _td7 = <td className="action-class">
 	        	<span className={context.state.secondBtn+" label label-success"}>
@@ -341,7 +351,7 @@ class View extends Component {
 		var context = this
 		var yy = []
 		var dep = []
-		for(var i =0; i<this.accounts.length; i++) {
+		for(var i =0; i<this.accounts; i++) {
 			dep.push(this.complainContract.methods.checkIfPoliceAccount(this.accounts[i]).call({from: this.accounts[this.selectUser]}))
 		}
 
@@ -356,8 +366,8 @@ class View extends Component {
 	}
 
 	componentWillUpdate() {
-		//this.fetchedComplains = []
-		//this.fetchFreshData()
+		this.fetchedComplains = []
+		this.fetchFreshData()
 	}
 
 
@@ -390,7 +400,17 @@ class View extends Component {
 							</tr>
 						</thead>
 
-							{this.state.table}
+							<tr>
+								<th>1</th>
+								<th>Deep Purohit</th>
+								<th>Push vihar sec-7, New Delhi</th>
+								<th>There is an accident at main market of Pushp Vihar sec-7, New delhi</th>
+								<th>Accident</th>
+								<th>100</th>
+								<th>Pending</th>
+							</tr>
+
+							{this.reactTBody}
 
 
 
@@ -429,8 +449,6 @@ class View extends Component {
 							<h3>Update Police Accounts</h3>
 							<input type="name" className="form-control" id="input-address" onChange={this.updatePoliceList} placeholder="comma seperated list of account eg. 0x6f85e63bb1ed0d07a9d653b3f18b0bc389b0165b, 0x665dd2d0028473eab94584000cedcbef9fdcb7d4..." />
 							<button type="submit" className="btn btn-default btn-block" id="complain-submit" onClick={this.sendTransPolList}>Submit</button>
-							<div className="alert alert-danger" role="alert">Police account is not added to the list by default. Complain status change will fail if not added.</div>
-
 					</div>
 					<div className="col-md-6">
 						<h3>Account Addresses</h3>

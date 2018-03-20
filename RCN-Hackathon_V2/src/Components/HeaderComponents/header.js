@@ -7,7 +7,7 @@ import './header.css'
 import img from './logo.jpeg';
 
 //import logo from './logo.svg';
-import logo2 from '../../img/logo.svg'
+//import logo2 from '../../img/logo.svg'
 
 class Header extends Component {
 	render() {

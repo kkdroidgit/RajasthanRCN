@@ -60,15 +60,18 @@ class Register extends Component {
         getLocation()
 
 
-		e.preventDefault();
+		//e.preventDefault();
 
 		var data = []
         data.push($('#input-name').val().replace(new RegExp(',', 'g'), '#'))
         data.push($('#input-address').val().replace(new RegExp(',', 'g'), '#'))
+				data.push($('#input-reward').val().replace(new RegExp(',', 'g'), '#'))
         data.push($('#input-desc').val().replace(new RegExp(',', 'g'), '#'))
+				data.push($('#type').val().replace(new RegExp(',', 'g'), '#'))
         console.log(data)
-        data = data.toString().replace(new RegExp(',', 'g'), '?').replace(new RegExp('#', 'g'), ',');
-        console.log(data)
+        //data = data.toString().replace(new RegExp(',', 'g'), '?').replace(new RegExp('#', 'g'), ',');
+				//renders data array in form of string
+				//console.log(data)
 
         var catdata = $('#type').val()
 
@@ -90,17 +93,37 @@ class Register extends Component {
             });
 
             console.log(response)
+						console.log(this.data);
             console.log('End of Response')
         }).catch(function(err) {
         	context.setState({notify: 'Error: Complain not Registered.', notiClass: 'danger'})
             console.log('Error: Message: ' + err.message);
         });
 
+//converting array to object
+				/*var dataobj = data.reduce(function(result, item, index, array) {
+									  result[index] = item;
+									  return result;
+									}, {});
 
+var ObjProps = ['name', 'address', 'amount', 'desc', 'value'];
+var obj = ObjProps.reduce(function(result2, item, index, array) {
+						result2[index] = item;
+						return result2;
+					}, {});
+var dataObjProps;
+							for(var i=0; i<dataobj.length; i++){
+								dataObjProps[i] = obj+":"+dataobj
+							}*/
+var objs = ['name', 'address', 'amount', 'desc', 'value'];
+							var dataObjProps = {};
+								objs.forEach((objs, i) => dataObjProps[objs] = data[i]);
+
+				console.log(dataObjProps);
+				return this.props.dataObjProps;
 	}
 
-	/*componentWillMount() {
-
+	/*componentWillMount(){
 
 
 
@@ -158,25 +181,25 @@ class Register extends Component {
 					<div className="form-group">
 						<label htmlFor="input-name" className="col-sm-2 control-label">Name: </label>
 						<div className="col-sm-10">
-							<input type="name" className="form-control" id="input-name" placeholder="Your Name" />
+							<input type="name" className="form-control" id="input-name" placeholder="Your Name" required/>
 						</div>
 					</div>
 					<div className="form-group">
 						<label htmlFor="input-address" className="col-sm-2 control-label">Address: </label>
 						<div className="col-sm-10">
-							<input type="name" className="form-control" id="input-address" placeholder="Address" />
+							<input type="name" className="form-control" id="input-address" placeholder="Address" required/>
 						</div>
 					</div>
 					<div className="form-group">
 						<label htmlFor="input-reward" className="col-sm-2 control-label">Reward: </label>
 						<div className="col-sm-10">
-							<input type="name" className="form-control" id="input-reward" placeholder="Reward in &#8377;"/>
+							<input type="name" className="form-control" id="input-reward" placeholder="Reward in &#8377;" required/>
 						</div>
 					</div>
 					<div className="form-group">
 						<label htmlFor="input-desc" className="col-sm-2 control-label">Description: </label>
 						<div className="col-sm-10">
-							<textarea className="form-control" rows="3" id="input-desc" placeholder="Description"></textarea>
+							<textarea className="form-control" rows="3" id="input-desc" placeholder="Description" required></textarea>
 						</div>
 					</div>
 					<div className="form-group">
@@ -203,5 +226,5 @@ class Register extends Component {
 		);
 	}
 }
-
+//module.exports = dataObjProps.val();
 	export default Register;

@@ -59,18 +59,18 @@ class Accounts extends Component {
 			<div className="accounts-class">
 				<div className="panel panel-default">
 					<div className="panel-heading">All accounts currently in your wallet</div>
-					<table className="table" id="table-data"> 
-						<thead> 
-							<tr> 
-								<th>#</th> 
-								<th>Name</th> 
-								<th>Location</th> 
+					<table className="table" id="table-data">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Name</th>
+								<th>Location</th>
 								<th>Description</th>
-								<th>Type</th> 
-								<th>Reward</th> 
-								<th>Status</th> 
+								<th>Type</th>
+								<th>Reward</th>
+								<th>Status</th>
 								<th>Action</th>
-							</tr> 
+							</tr>
 						</thead>
 
 							{this.state.table}
@@ -78,7 +78,7 @@ class Accounts extends Component {
 
 
 
-					</table> 
+					</table>
 				</div>
 			</div>
 
