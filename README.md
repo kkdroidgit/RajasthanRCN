@@ -35,6 +35,7 @@ These Ethereum Smart Contracts are stored as special transactions on the Ethereu
 These decentralized apps are defined by smart contracts. A smart contract allows individuals to exchange data in a trusted, conflict-free manner without relying on a third party like a bank, lawyer or notary.
 
 
+
 # HOW IT WORKS
 
 
