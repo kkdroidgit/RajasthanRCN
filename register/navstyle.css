@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin:0;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Amazing-Webpage-Background-Images.jpg');
+    height: auto;
+}
+   .content{
+       margin:0;
+       padding:0;
+       height:600px;
+   }
+
+nav div {
+         background-color: #1d1a1a;
+         top: 0; width: 100%;
+         height:50px;
+         }
+
+div a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+    display:inline-block;
+     border:1px solid white;
+      border-radius:8px;
+}
+ul {
+  display: inline;
+  margin: 0;
+
+}
+
+ul li {display: inline-block; }
+
+ul li a:hover{border-radius:8px;
+              color:white;
+              background-color: #2b2828;
+              }
+ul li:hover ul {display: block; border-radius:8px;}
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+ul li ul li {
+  background: #808080;
+  border-radius:8px;
+  display: block;
+  z-index:30;
+}
+ul li ul li a {display:block !important; }
+ul li ul li:hover {color:white; background-color: #2b2828;border-radius:8px;}
