@@ -37,6 +37,9 @@ These decentralized apps are defined by smart contracts. A smart contract allows
 
 
 # HOW IT WORKS
+
+## Link to Video - [Demo Video](https://drive.google.com/open?id=1oM_req9AeLJLRg4Ce2pyiAQMBnKoG2vZ)
+
 In case of a compaint, the citizen ought to register the complaint online that will reach all police accounts and the citizen shall not have to worry about jurisdictional issues, and neither will the policemen. 
 
 If A looses her Voter ID Card, and B reads the complaint on the blockchain and finds the card near him. A may choose to offer a reward for the same which in case of successful finding and transfer of lost items, shall be transferred to B's account through the same network. 
