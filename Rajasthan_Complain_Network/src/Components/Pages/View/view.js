@@ -455,10 +455,10 @@ console.log(fetchData.cid);
 						<div>
 
 							<ul className="list-group">
-							  <li className="list-group-item">SuperUser : {this.accounts[0]}</li>
-							  <li className="list-group-item">Police : {this.accounts[1]}</li>
-							  <li className="list-group-item">Citizen1 : {this.accounts[2]}</li>
-							  <li className="list-group-item">Citizen2 : {this.accounts[3]}</li>
+							  <li className="list-group-item">Sudo User : {this.accounts[0]}</li>
+							  <li className="list-group-item">Police Person : {this.accounts[1]}</li>
+							  <li className="list-group-item">Person1 : {this.accounts[2]}</li>
+							  <li className="list-group-item">Person2 : {this.accounts[3]}</li>
 							</ul>
 						</div>
 
