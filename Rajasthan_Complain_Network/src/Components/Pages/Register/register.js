@@ -166,10 +166,10 @@ var objs = ['name', 'address', 'amount', 'desc', 'value'];
 				<p>Select a User to perform the following action.</p>
 				<select className="form-control" onChange={this.updateUser}>
 					<option value="0">Sudo User</option>
-					<option value="1">Police</option>
-					<option value="2">Citizen 1</option>
-					<option value="3">Citizen 2</option>
-				</select>
+					<option value="1">Police Personnel</option>
+					<option value="2">Person 1</option>
+					<option value="3">Person 2</option>
+				</select
 				<h4><span className="label label-default">Account No: {this.accounts[this.selectUser]}</span></h4>
 				<br/>
 				<hr/>
