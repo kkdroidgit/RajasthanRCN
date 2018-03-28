@@ -38,7 +38,6 @@ These decentralized apps are defined by smart contracts. A smart contract allows
 
 # HOW IT WORKS
 
-## Link to Video - [Demo Video](https://drive.google.com/open?id=1oM_req9AeLJLRg4Ce2pyiAQMBnKoG2vZ)
 
 In case of a compaint, the citizen ought to register the complaint online that will reach all police accounts and the citizen shall not have to worry about jurisdictional issues, and neither will the policemen. 
 
